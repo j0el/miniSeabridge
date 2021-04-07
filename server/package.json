@@ -1,0 +1,21 @@
+{
+  "name": "graphql-mongoose-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-fastify": "^3.0.0-alpha.3",
+    "fastify": "^3.14.1",
+    "graphql": "^15.5.0",
+    "graphql-compose": "^7.25.1",
+    "graphql-compose-mongoose": "^9.2.2",
+    "graphql-mongoose-schemabuilder": "^1.0.9",
+    "mongoose": "^5.12.3"
+  }
+}
