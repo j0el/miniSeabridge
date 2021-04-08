@@ -39,7 +39,7 @@ const PostViewer = ({ canEdit, onEdit }) => (
             </tr>
           ))}
         </tbody>
-      </Table>
+      </Table>  
     )}
   </Query>
 );
