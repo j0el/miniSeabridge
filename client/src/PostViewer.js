@@ -4,14 +4,14 @@ import { Query } from 'react-apollo';
 import { Table } from 'reactstrap';
 
 export const GET_POSTS = gql`
-  query GetPosts {
-    posts {
-      id
-      author
-      body
-    }
+query{
+  ResidentMany{
+    name
+
   }
+}
 `;
+
 
 const rowStyles = (post, canEdit) => canEdit(post)
   ? { cursor: 'pointer', fontWeight: 'bold' }
@@ -23,19 +23,19 @@ const PostViewer = ({ canEdit, onEdit }) => (
       <Table>
         <thead>
           <tr>
-            <th>Author</th>
-            <th>Body</th>
+            <th>name</th>
+            <th>name</th>
           </tr>
         </thead>
         <tbody>
-          {data.posts.map(post => (
+          {data.posts.map(post => ( imovielibraryr
             <tr
               key={post.id}
               style={rowStyles(post, canEdit)}
               onClick={() => canEdit(post) && onEdit(post)}
             >
-              <td>{post.author}</td>
-              <td>{post.body}</td>
+              <td>{post.name}</td>
+              <td>{"Null Data"}</td>
             </tr>
           ))}
         </tbody>

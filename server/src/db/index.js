@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 mongoose.connect(process.env.DB || 'mongodb://localhost/graphqlexample', {
   useNewUrlParser: true,
   useUnifiedTopology: true

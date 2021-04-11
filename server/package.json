@@ -11,7 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "apollo-server-fastify": "^3.0.0-alpha.3",
+    "cors": "^2.8.5",
     "fastify": "^3.14.1",
+    "fastify-cors": "^4.1.0",
     "graphql": "^15.5.0",
     "graphql-compose": "^7.25.1",
     "graphql-compose-mongoose": "^9.2.2",

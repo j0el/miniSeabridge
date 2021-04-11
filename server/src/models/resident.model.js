@@ -1,21 +1,26 @@
-//resident = vehicle
 const mongoose = require('mongoose');
 
 const residentSchema = new mongoose.Schema({
-    firstName: String,
-    lastName: String,
-    middleName: String,
-    dwellingID: String,
-    phone: String,
-    password: String,
-    vehicleID: String,
-    residentType: { 
-        type: String, 
-        enum : ['owner','tennant', 'guest', 'permanent'], 
-        default: 'user' 
-        }, 
-});
+  name: { type: String, },
 
-const Resident = mongoose.model('resident', residentSchema);
+  dwellings: [{
+    status: {String, enum: ['Owner', 'Renter', 'Guest']}, 
+    address: String,
+    subHOA: {String,enum:['Marluna', 'Island', 'Oceano', '121', 'Docks']},
+  }],
+
+  vehicles: [{
+    make: String,
+    model: String,
+    color: String,
+    year: Number,
+    plate: String
+  }]
+})
+
+const Resident = mongoose.model(
+  'Resident',
+  residentSchema
+);
 
 exports.Resident = Resident;

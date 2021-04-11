@@ -21,6 +21,7 @@ const start = async () => {
     });
 
     await isConnected;
+    fastify.register(require('fastify-cors'), {origin: true})
     await fastify.register(gqlServer.createHandler()).listen(process.env.PORT || 3000, '0.0.0.0');
     fastify.log.info(`server listening on ${fastify.server.address().port}`);
   } catch (err) {
